@@ -20,6 +20,6 @@ async function onConnection(_socket) {
 async function helloRequest(request) {
     console.log(request)
     await sleep(random(500))
-    response = { message: 'Hello ' + request.name }
+    response = { message: 'Hello ' + request.name, addedNum: request.num + 1 }
     socket.emit('helloResponse', response);
 }

@@ -15,13 +15,13 @@ function helloResponse(response) {
 socket.on('helloResponse', helloResponse);
 
 function severalHello() {
-    helloRequest({ name: 'Arne' });
-    helloRequest({ name: 'Bertil' });
-    helloRequest({ name: 'Ceasar' });
-    helloRequest({ name: 'David' });
-    helloRequest({ name: 'Erik' });
-    helloRequest({ name: 'Felix' });
-    helloRequest({ name: 'George' });
+    helloRequest({ name: 'Arne', num: 1 });
+    helloRequest({ name: 'Bertil', num: 2 });
+    helloRequest({ name: 'Ceasar', num: 3 });
+    helloRequest({ name: 'David', num: 4 });
+    helloRequest({ name: 'Erik', num: 5 });
+    helloRequest({ name: 'Felix', num: 6 });
+    helloRequest({ name: 'George', num: 7 });
 }
 
 severalHello();
