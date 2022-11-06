@@ -2,15 +2,11 @@ const ServiceSocket = require('./ServiceSocket');
 
 module.exports = class HelloService extends ServiceSocket {
     constructor(host, port) {
-        super(host, port)
-        this.io.on('connect', this.registerService);
+        super(host, port, {
+            'Hello': helloRequest,
+        })
     }
 
-    registerService(socket) {
-        console.log("Client connected!");
-        this.socket = socket;
-        this.socket.on('Hello', request => helloRequest(this.socket, request))
-    }
 }
 
 const random = ub => Math.floor(ub * Math.random());
